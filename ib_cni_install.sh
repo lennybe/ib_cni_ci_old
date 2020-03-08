@@ -266,10 +266,10 @@ EOF
 
 function create_vfs {
     if [ $SRIOV_INTERFACE == 'auto_detect' ]; then
-        export SRIOV_INTERFACE=$(ls -l /sys/class/net/ | grep $(lspci |grep Mellanox | grep MT27800|head -n1|awk '{print $1}') | awk '{print $9}')
+        export SRIOV_INTERFACE=$(ls -l /sys/class/infiniband/ | grep $(lspci |grep Mellanox |head -n1|awk '{print $1}') | awk '{print $9}')
     fi
-    echo 0 > /sys/class/net/$SRIOV_INTERFACE/device/sriov_numvfs
-    echo $VFS_NUM > /sys/class/net/$SRIOV_INTERFACE/device/sriov_numvfs
+    echo 0 > /sys/class/infiniband/$SRIOV_INTERFACE/device/sriov_numvfs
+    echo $VFS_NUM > /sys/class/infiniband/$SRIOV_INTERFACE/device/sriov_numvfs
 }
 
 
