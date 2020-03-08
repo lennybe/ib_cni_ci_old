@@ -362,6 +362,6 @@ echo "All logs $LOGDIR"
 echo "All confs $ARTIFACTS"
 
 echo "Setup is up and running. Run following to start tests:"
-echo "# WORKSPACE=$WORKSPACE NETWORK=$NETWORK ./cni_test.sh"
+echo "# WORKSPACE=$WORKSPACE NETWORK=$NETWORK ./ib_cni_test.sh"
 
 exit $status

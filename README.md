@@ -3,18 +3,18 @@ CI for deploying Kubernetes with Multus, SRIOV CNI, and Device Plugin.
 
 ### Download and install all the components
 ```sh
-$ ./cni_install.sh
+$ ./ib_cni_install.sh
 ```
 ### Run basic test
 
 ``` sh
-$ ./cni_test.sh
+$ ./ib_cni_test.sh
 ```
 
 ### Stop all the components
 
 ```sh
-$ ./cni_stop.sh
+$ ./ib_cni_stop.sh
 ```
 
 
